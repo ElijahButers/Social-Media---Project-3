@@ -44,6 +44,13 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Sharing method
+    func shareTapped() {
+        
+        let vc = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
+        presentViewController(vc, animated: true, completion: nil)
+    }
 
 
 }
