@@ -6,6 +6,7 @@
 //  Copyright © 2016 Elijah Buters. All rights reserved.
 //
 
+import Social
 import UIKit
 
 class DetailViewController: UIViewController {
