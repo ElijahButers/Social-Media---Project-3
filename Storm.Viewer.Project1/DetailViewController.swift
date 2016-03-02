@@ -49,7 +49,15 @@ class DetailViewController: UIViewController {
     // Sharing method
     func shareTapped() {
         
-        let vc = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
+//        let vc = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
+//        presentViewController(vc, animated: true, completion: nil)
+        
+        // Facebook sharing
+        
+        let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        vc.setInitialText("Look at this great picture!")
+        vc.addImage(detailImageView.image!)
+        vc.addURL(NSURL(string: "http://www.photolib.noaa.gov/nssl"))
         presentViewController(vc, animated: true, completion: nil)
     }
 
